@@ -1,0 +1,18 @@
+<h1 *ngIf="!forecasts">Loading ...</h1>
+
+<table>
+  <thead>
+    <th>Date</th>
+    <th>Temp. (C)</th>
+    <th>Temp. (F)</th>
+    <th>Summary</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let forecast of forecasts">
+      <td>{{ forecast.date | date }}</td>
+      <td>{{ forecast.temperatureC }}</td>
+      <td>{{ forecast.temperatureF }}</td>
+      <td>{{ forecast.summary }}</td>
+    </tr>
+  </tbody>
+</table>
