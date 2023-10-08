@@ -1,27 +1,9 @@
-# HealthCheck
+This is a very simple project where I use Angular to create a SPA at the front end and AN ASP.NET core to create a very basic web API. I used Angular material for styling.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.4.
+The idea of the project is that it allows you to make some diagnostics to check the health of other servers all you have to do is to write the domain name of that site and the checks will return one of three results: Healthy, Degraded, Unhealthy. 
 
-## Development server
+I only registered one check which is Internet Control Message Protocol (ICMP) this check is also known as PING. the idea is that it sends a packet to that server and waits for the response. If the response comes within a range of an expected time then it is Healthy. if it took time more than the given range then it is Degredaded. If there is an error and the server refuses the packet then it is Unhealthy. 
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+I used two middlewares. One is to enable CORS to allow the Angular app to talk to the API. The other one is to register the check and create an endpoint so that it is accessible and returns the result. There is also an example of an API Controller. I overridden the base class of the Options of the middleware to modify the response to make it in JSON instead of just true or force and used DI to make it available for the app. to use.
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+In Angular, I used standalone components and used Lazy loading to route to them.
