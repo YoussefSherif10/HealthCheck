@@ -1,0 +1,17 @@
+<h1 *ngIf="!checks">Loading ...</h1>
+<table *ngIf="checks">
+    <thead>
+        <th>Name</th>
+        <th>Response Time</th>
+        <th>Status</th>
+        <th>Description</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let check of checks">
+            <td>{{ check.name }}</td>
+            <td>{{ check.responseTime }}</td>
+            <td>{{ check.status }}</td>
+            <td>{{ check.description }}</td>
+        </tr>
+    </tbody>
+</table>

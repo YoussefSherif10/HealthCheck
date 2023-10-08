@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using api;
-using Microsoft.AspNetCore.Cors;
+
 
 namespace HealthCheckAPI.Controllers
 {

@@ -2,24 +2,27 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Subscription } from 'rxjs';
 import { CommonModule } from '@angular/common';
+import { MatTableModule } from '@angular/material/table';
 
 @Component({
   selector: 'app-fetch-data',
   standalone: true,
-  imports: [CommonModule, HttpClientModule],
+  imports: [CommonModule, HttpClientModule, MatTableModule],
   templateUrl: './fetch-data.component.html',
-  styleUrls: ['./fetch-data.component.css'],
 })
 export class FetchDataComponent implements OnInit, OnDestroy {
   subscription!: Subscription;
-  forecasts!: WeatherForecast[];
+  displayedColumns: string[] = ['date', 'Temp. (C)', 'Temp. (F)', 'summary'];
+  dataSource!: WeatherForecast[];
 
   constructor(private http: HttpClient) {}
 
   ngOnInit(): void {
-    this.http
+    this.subscription = this.http
       .get<WeatherForecast[]>('http://localhost:40080/api/WeatherForecast')
-      .subscribe((data: WeatherForecast[]) => (this.forecasts = data));
+      .subscribe((data: WeatherForecast[]) => {
+        this.dataSource = data;
+      });
   }
 
   ngOnDestroy(): void {

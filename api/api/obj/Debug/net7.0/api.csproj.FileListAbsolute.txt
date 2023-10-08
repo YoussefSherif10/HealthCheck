@@ -24,10 +24,10 @@
 /Users/yousseffekry/Downloads/HealthCheck/api/api/obj/Debug/net7.0/staticwebassets.pack.json
 /Users/yousseffekry/Downloads/HealthCheck/api/api/obj/Debug/net7.0/staticwebassets.build.json
 /Users/yousseffekry/Downloads/HealthCheck/api/api/obj/Debug/net7.0/staticwebassets.development.json
-/Users/yousseffekry/Downloads/HealthCheck/api/api/obj/Debug/net7.0/scopedcss/bundle/api.styles.css
 /Users/yousseffekry/Downloads/HealthCheck/api/api/obj/Debug/net7.0/api.csproj.CopyComplete
 /Users/yousseffekry/Downloads/HealthCheck/api/api/obj/Debug/net7.0/api.dll
 /Users/yousseffekry/Downloads/HealthCheck/api/api/obj/Debug/net7.0/refint/api.dll
 /Users/yousseffekry/Downloads/HealthCheck/api/api/obj/Debug/net7.0/api.pdb
 /Users/yousseffekry/Downloads/HealthCheck/api/api/obj/Debug/net7.0/api.genruntimeconfig.cache
 /Users/yousseffekry/Downloads/HealthCheck/api/api/obj/Debug/net7.0/ref/api.dll
+/Users/yousseffekry/Downloads/HealthCheck/api/api/obj/Debug/net7.0/scopedcss/bundle/api.styles.css

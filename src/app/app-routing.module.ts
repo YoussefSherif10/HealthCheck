@@ -14,6 +14,13 @@ const routes: Routes = [
         (m) => m.FetchDataComponent
       ),
   },
+  {
+    path: 'health-check',
+    loadComponent: () =>
+      import('./features/health-check/health-check.component').then(
+        (m) => m.HealthCheckComponent
+      ),
+  },
 ];
 
 @NgModule({
